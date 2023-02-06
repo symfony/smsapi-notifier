@@ -24,6 +24,11 @@ final class SmsapiTransportFactoryTest extends TransportFactoryTestCase
     public function createProvider(): iterable
     {
         yield [
+            'smsapi://host.test',
+            'smsapi://token@host.test',
+        ];
+
+        yield [
             'smsapi://host.test?from=testFrom',
             'smsapi://token@host.test?from=testFrom',
         ];

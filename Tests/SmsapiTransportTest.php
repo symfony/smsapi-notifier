@@ -30,6 +30,7 @@ final class SmsapiTransportTest extends TransportTestCase
 
     public function toStringProvider(): iterable
     {
+        yield ['smsapi://test.host', $this->createTransport()];
         yield ['smsapi://test.host?from=testFrom', $this->createTransport()];
         yield ['smsapi://test.host?from=testFrom&fast=1', $this->createTransport(null, true)];
         yield ['smsapi://test.host?from=testFrom&test=1', $this->createTransport(null, false, true)];
